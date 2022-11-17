@@ -1,0 +1,1094 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #333;
+    font-family: "Noto Sans JP", "sans-serif";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+.body {
+    max-width: 1500px;
+}
+/*ヘッダー*/
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/header_sea.png);
+    background-repeat: no-repeat; /*画像を繰り返し表示しない*/
+    background-position: center center; /*画像を常に天地左右中央配置*/
+    background-size: cover; /*表示する大きさに基づいて背景画像を調整*/
+}
+/*鳥のアニメーション*/
+.bird {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    animation: moving 16s linear infinite;
+}
+.bird.-type_2 {
+    animation-delay: 1s;
+}
+.bird.-type_2:before,
+.bird.-type_2:after {
+    animation-delay: -2s;
+}
+.bird.-type_3 {
+    animation-delay: 3s;
+}
+@keyframes moving {
+    0% {
+        top: 13vh;
+        left: -2vw;
+    }
+    25% {
+        top: 17vh;
+        left: 23vw;
+    }
+    100% {
+        top: 13vh;
+        left: 101vw;
+    }
+}
+.bird:before,
+.bird:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #333;
+    transform: rotate(-30deg);
+    transform-origin: right bottom;
+}
+.bird:before {
+    width: 100%;
+    height: 1px;
+    animation: leftWing 8s liner infinite;
+}
+.bird:after {
+    width: 1px;
+    height: 100%;
+    animation: rightWing 8s linear infinite;
+}
+@keyframes leftWing {
+    0% {
+        transform: rotate(-30deg);
+    }
+    2% {
+        transform: rotate(-110deg);
+    }
+    4% {
+        transform: rotate(-30deg);
+    }
+    6% {
+        transform: rotate(-110deg);
+    }
+    8% {
+        transform: rotate(-30deg);
+    }
+    10% {
+        transform: rotate(-110deg);
+    }
+    12% {
+        transform: rotate(-30deg);
+    }
+    30% {
+        transform: rotate(-30deg);
+    }
+    42% {
+        transform: rotate(-35deg);
+    }
+    72% {
+        transform: rotate(-35deg);
+    }
+    74% {
+        transform: rotate(10deg);
+    }
+    76% {
+        transform: rotate(-30deg);
+    }
+    78% {
+        transform: rotate(-110deg);
+    }
+    80% {
+        transform: rotate(-30deg);
+    }
+    82% {
+        transform: rotate(-110deg);
+    }
+    84% {
+        transform: rotate(-30deg);
+    }
+    86% {
+        transform: rotate(-110deg);
+    }
+    88% {
+        transform: rotate(-30deg);
+    }
+    90% {
+        transform: rotate(-110deg);
+    }
+    92% {
+        transform: rotate(-30deg);
+    }
+    94% {
+        transform: rotate(-110deg);
+    }
+    96% {
+        transform: rotate(-30deg);
+    }
+    98% {
+        transform: rotate(-110deg);
+    }
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+@keyframes rightWing {
+    0% {
+        transform: rotate(30deg);
+    }
+    2% {
+        transform: rotate(110deg);
+    }
+    4% {
+        transform: rotate(30deg);
+    }
+    6% {
+        transform: rotate(110deg);
+    }
+    8% {
+        transform: rotate(30deg);
+    }
+    10% {
+        transform: rotate(110deg);
+    }
+    12% {
+        transform: rotate(30deg);
+    }
+    30% {
+        transform: rotate(30deg);
+    }
+    42% {
+        transform: rotate(35deg);
+    }
+    72% {
+        transform: rotate(35deg);
+    }
+    74% {
+        transform: rotate(0deg);
+    }
+    76% {
+        transform: rotate(30deg);
+    }
+    78% {
+        transform: rotate(110deg);
+    }
+    80% {
+        transform: rotate(30deg);
+    }
+    82% {
+        transform: rotate(110deg);
+    }
+    84% {
+        transform: rotate(30deg);
+    }
+    86% {
+        transform: rotate(110deg);
+    }
+    88% {
+        transform: rotate(30deg);
+    }
+    90% {
+        transform: rotate(110deg);
+    }
+    92% {
+        transform: rotate(30deg);
+    }
+    94% {
+        transform: rotate(110deg);
+    }
+    96% {
+        transform: rotate(30deg);
+    }
+    98% {
+        transform: rotate(110deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}
+.header_wrap {
+    top: 0;
+}
+/*グローバルナビ*/
+.header_global_nav {
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    transition: background-color 1s ease-in-out;
+}
+.header_global_nav.change-color {
+    background: #6b9bd6;
+}
+.logo01 ul {
+    display: flex;
+}
+.logo_name {
+    font-size: 25px;
+    line-height: 1.4; /*35/25*/
+    color: #fff;
+}
+.pc_nav {
+    width: 53%; /*710/1366*100*/
+}
+.pc_nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+.pc_nav li {
+    font-size: 20px;
+    line-height: 1.75; /*35/20*/
+    color: #fff;
+}
+.nav_contact {
+    font-size: 26px;
+    line-height: 1.73; /*45/26*/
+}
+.sp_nav,
+.sp_btn {
+    display: none;
+}
+/*縦文章[海の彼方まで..]*/
+.catch_copy {
+    width: 23.2vw; /*318/1366*100=23.2*/
+    font-size: 30px; /*30px/1366*100=2.19*/
+    letter-spacing: 0.2em; /*200/1000*/
+    line-height: 2.4; /*72/30*/
+    font-family: "Yu Mincho", "YuMincho";
+    color: #fff;
+    -ms-writing-mode: bt-rl; /*縦書きレイアウト*/
+    writing-mode: vertical-rl; /*縦書きレイアウト右→左*/
+    padding-top: 200px;
+    margin-left: 64vw; /*875/1366*100*/
+}
+
+/*見出し設定*/
+.title {
+    margin: 0 auto;
+    width: 40vw; /*556/1366*100*/
+    height: 120px; /*画像の高さ*/
+    background-image: url(../images/line_brush.png);
+    background-repeat: no-repeat; /*画像が繰り返すのを防ぐ*/
+    background-position: center center; /*画像を中央寄せ*/
+    background-size: 100% auto; /*背景画像を要素に合わせて表示*/
+    text-align: center;
+}
+.title_name {
+    font-size: 61px; /*61/1366*100*/
+    line-height: 1.75; /*107/61*/
+    color: #0094ff;
+}
+.subtitle {
+    font-size: 17px;
+    line-height: 1.7; /*29/17*/
+    color: #0094ff;
+}
+
+/*1_About_自己紹介*/
+.contents1 {
+    padding-top: 100px;
+}
+.self_introduction {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+/*左_画像[好きな〇〇]*/
+.favorite {
+    width: 34vw; /*465÷1366*100*/
+    height: auto;
+    position: relative;
+}
+.favorite img {
+    text-align: left;
+}
+.favorite_text {
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.favorite_title {
+    width: 6%; /*30÷470*100*/
+    margin: 57% 57% 0 35%; /*270÷470*100 164÷470*100*/
+    font-size: 30px;
+    color: #fff;
+    font-family: "Yu Mincho";
+    -ms-writing-mode: bt-rl;
+    writing-mode: vertical-rl;
+    display: inline-block;
+}
+.favorite_item {
+    font-size: 20px;
+    font-feature-settings: "palt";
+}
+.favorite_item01 {
+    width: 12vw; /*167/470*100*/
+    margin: 2% 16% 0 41%; /*9÷470*100 74÷470*100 218÷470*100-微調整(5)*/
+    display: flex;
+    align-items: center;
+}
+.favorite_item01:before {
+    border-top: 1px solid;
+    border-color: #0094ff;
+    content: "";
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+.favorite_item02 {
+    width: 12vw; /*168/1366*100*/
+    margin: 3% 24% 0 33%; /*16÷470*100 112÷470*100 180÷470*100-微調整*/
+    display: flex;
+    align-items: center;
+}
+.favorite_item02:before {
+    border-top: 1px solid;
+    border-color: #0094ff;
+    content: "";
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+.favorite_item03 {
+    width: 13vw; /*183/366*100*/
+    margin: 3% 28% 0 26%; /*16÷470*100 133÷470*100 144÷470*100-微調整*/
+    display: flex;
+    align-items: center;
+}
+.favorite_item03:before {
+    border-top: 1px solid;
+    border-color: #0094ff;
+    content: "";
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+.favorite_item04 {
+    width: 17vw; /*233/1366*100*/
+    margin: 4% 26% 0 17%; /*16÷470*100 122÷470*100 105÷470*100-微調整*/
+    display: flex;
+    align-items: center;
+}
+.favorite_item04:before {
+    border-top: 1px solid;
+    border-color: #0094ff;
+    content: "";
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+
+/*右_詳細[名称/事業内容..]*/
+.explanation {
+    width: 52vw; /*175/1366*100*/
+    margin: 50px 130px 0 62px;
+}
+.explanation dt {
+    color: #0094ff;
+    float: left; /*左に寄せる*/
+    clear: left;
+    margin-right: 0.5em;
+    width: 9vw; /*120/1366*100*/
+    line-height: 1.75; /*29.75/17*/
+}
+.explanation dd {
+    width: 40vw; /*550/1366*100*/
+    line-height: 1.75;
+    margin-left: 12vw; /*158/1366*100*/
+    margin-bottom: 4%; /*25/709*100*/
+}
+.explanation_border {
+    border-bottom: 1px solid #0094ff;
+    content: "";
+    flex-grow: 1;
+    padding-bottom: 20px;
+}
+/*文章[私の名前の由来で..]*/
+.message {
+    width: 93vw; /*1264/1366*100*/
+    height: 768px; /*画像の高さ*/
+    background-image: url(../images/about_ellipse.png);
+    background-repeat: no-repeat; /*画像が繰り返すのを防ぐ*/
+    background-position: center center; /*画像を中央寄せにする*/
+    background-size: 100% auto; /*背景画像を要素に合わせて表示*/
+    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spme {
+    display: none;
+}
+.message p {
+    font-size: 2.5vw; /*35/1366*100*/
+    font-family: "Yu Mincho";
+    color: #0094ff;
+    line-height: 2.1; /*74/35*/
+    text-align: center;
+    font-feature-settings: "palt";
+    letter-spacing: 0.15em;
+}
+
+/*2_Skill_できること*/
+.contents2 {
+    padding-top: 100px; /*100/1366*100*/
+}
+.skill_content {
+    width: 55vw; /*841/1366*100*/
+    padding-top: 3.6vh; /*50/1366*100=3.6*/
+    margin: 0 auto;
+}
+.description_skill {
+    line-height: 1.76; /*30/17*/
+    margin: 0 auto;
+}
+.under {
+    border-bottom: dotted 2px #9ccee5;
+    /*background: linear-gradient(transparent 70%, #9ccee573 50%);*/
+}
+.under:hover {
+    color: #999;
+}
+.skill_menu {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+/*左_デザインスキル*/
+.design_skill {
+    width: 24vw; /*325/1366*100*/
+}
+.title_skill01 {
+    width: 22vw; /*310/1366*100*/
+    height: 37px;
+    border-radius: 9999px;
+    background-color: #0094ff;
+    color: #fff;
+    text-align: center;
+    line-height: 37px;
+}
+.sp_icon_design {
+    display: none;
+}
+.skill_icon {
+    margin-top: 42px;
+}
+.icon_design ul {
+    width: 21vw; /*300/1366*100*/
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+.skill_item {
+    width: 9.5vw; /*130/1366*100*/
+}
+.skill_item p {
+    text-align: center;
+    margin-top: 25px;
+}
+.star {
+    text-align: center;
+    color: #d6d6d6;
+    margin-top: 25px;
+}
+.star_blue {
+    color: #9ccee5;
+}
+.skill_explanation01 {
+    width: 24vw; /*330/1366*100*/
+    display: flex;
+    justify-content: space-between;
+}
+.skill_explanation01 p {
+    width: 10vw; /*140/1366*100*/
+    font-size: 15px;
+    line-height: 1.3; /*20/15*/
+    margin-top: 30px;
+}
+.ai {
+    padding-right: 10px;
+}
+/*右_コーディングスキル*/
+.cording_skill {
+    width: 33vw; /*455/1366*100*/
+}
+.title_skill02 {
+    width: 32vw; /*442/1366*100*/
+    height: 37px;
+    border-radius: 9999px;
+    background-color: #0094ff;
+    color: #fff;
+    text-align: center;
+    line-height: 37px;
+}
+.icon_cording ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+.skill_explanation02 p {
+    width: 33vw; /*452/1366*100*/
+    font-size: 15px;
+    margin-top: 30px;
+    line-height: 1.3;
+    padding-right: 50px;
+}
+.sp_icon_conrding {
+    display: none;
+}
+
+/*3_Works_作品実績*/
+.contents3 {
+    margin-top: 50px;
+    padding-top: 100px;
+}
+.works_menu {
+    width: 100%;
+    margin-top: 50px;
+    background-color: rgb(193, 239, 255, 15%);
+}
+.works_slider {
+    width: 92vw; /*1260/1366*100*/
+    margin: 0 auto;
+}
+.works_item {
+    width: 25vw; /*348/1366*100*/
+    text-align: center;
+    padding: 40px 65px 20px 65px;
+}
+.works_item img {
+    margin: auto;
+}
+.works_title {
+    color: #0094ff;
+    line-height: 1.76; /*30/17*/
+    margin-bottom: 25px;
+}
+.content_title {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.56; /*25/16*/
+}
+.detail {
+    font-size: 16px;
+    line-height: 1.56; /*25/16*/
+    margin-bottom: 12px;
+}
+.button01 {
+    margin-top: 50px;
+}
+.button01 a {
+    background: rgb(208, 188, 212, 60%);
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100px; /*100/1366*100*/
+    padding: 25px 60px;
+    transition: 0.3s ease-in-out;
+}
+.button01 a:hover {
+    background: #cfbbd3;
+    color: #fff;
+}
+.button01 a:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.button01 a:hover:after {
+    border-color: #fff;
+}
+
+/*フッター*/
+.footer {
+    width: 100%;
+    height: 260vh;
+    background-image: url(../images/footer_sea_code.png);
+    background-repeat: no-repeat; /*画像を繰り返し表示しない*/
+    background-position: center center; /*画像を常に天地左右中央配置*/
+    /*background-attachment: fixed; /*コンテンツの高さが画像の高さより大きい時動かないように固定*/
+    background-size: cover; /*表示する大きさに基づいて背景画像を調整*/
+}
+.contents4_footer_nav {
+    top: 0;
+}
+/*4_Contact_お問い合わせ*/
+.contents4 {
+    margin-top: 100px;
+    padding-top: 100px;
+}
+.contents4_detail {
+    width: 55%; /*750/1366*100*/
+    margin: 0 auto;
+}
+.contact_message {
+    font-size: 20px;
+    line-height: 1.75; /*35/20*/
+    text-align: center;
+    font-feature-settings: "palt";
+    margin-top: 55px;
+}
+.contact_form {
+    margin-top: 60px;
+}
+.select {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 50px;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    width: 370px; /*370/1366*100*/
+    color: #444;
+}
+.select:focus {
+    outline: 1px #9a9fff solid;
+}
+.space {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 50px;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    width: 55vw; /*745/1366*100*/
+    color: #999;
+}
+.space:focus {
+    outline: 1px #9a9fff solid;
+    color: #333;
+}
+.contact_title {
+    line-height: 1.75; /*28/16*/
+}
+.contact_title ul {
+    display: flex;
+}
+.contact_title li {
+    font-size: 16px;
+    line-height: 1.75; /*28/16*/
+}
+.required {
+    font-size: 14px;
+    height: 30px;
+    border-radius: 9999px;
+    background-color: #ff9290;
+    color: #fff;
+    text-align: center;
+    line-height: 1.75;
+    padding: 0 20px;
+    margin: 0 0 5px 10px;
+}
+.textarea {
+    font-size: 16px;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    height: 208px;
+    width: 55vw; /*745/1366*100*/
+}
+.textarea:focus {
+    outline: 1px #9a9fff solid;
+    color: #333;
+}
+.button02 {
+    margin-top: 100px;
+}
+.button02 a {
+    background: #931069;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 150px;
+    padding: 15px 45px;
+    transition: 0.3s ease-in-out;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.75; /*42/24*/
+}
+.button02 a:hover {
+    background: #cfbbd3;
+    color: #fff;
+}
+.button02 a:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.button02 a:hover:after {
+    border-color: #fff;
+}
+/*フッターナビ*/
+.logo_fotter {
+    margin-top: 30vh;
+}
+.logo01_fotter ul {
+    display: flex;
+    justify-content: center;
+}
+.logo_name_fotter {
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    line-height: 1.2; /*30/25*/
+}
+.pc_nav_footer {
+    margin-top: 60px; /*60/1366*100*/
+}
+.pc_nav_footer ul {
+    margin: 0 auto;
+    width: 52vw; /*710/1366*100*/
+    display: flex;
+    justify-content: space-between;
+}
+.pc_nav_footer li {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.75; /*35/20*/
+}
+
+/*レスポンシブ1100px~*/
+/*skillの文章改行の調整*/
+@media screen and (max-width: 1135px) {
+    .description_skill br {
+        display: none;
+    }
+}
+
+/*レスポンシブ1063px~*/
+@media screen and (max-width: 1063px) {
+    /*ヘッダー*/
+    .catch_copy {
+        width: 30vw; /*245÷1366*100=17.9*/
+        font-size: 23px;
+    }
+    .br_none {
+        display: none;
+    }
+
+    /*1_About_自己紹介*/
+    .title_name {
+        font-size: 50px; /*61/1366*100*/
+        line-height: 2;
+    }
+    .subtitle {
+        line-height: 0.1;
+    }
+    .favorite_title {
+        font-size: 2.2vw; /*30/1366*100*/
+    }
+    .favorite_item {
+        font-size: 1.5vw; /*20/1366*100*/
+    }
+
+    .explanation {
+        width: 52vw;
+        margin: 50px 130px 0 62px;
+    }
+    .explanation dt {
+        float: none; /*横並び×*/
+        margin-right: 0;
+        width: 100%; /*120/1366*100*/
+    }
+    .explanation dd {
+        width: 100%;
+        margin-left: 0;
+    }
+    .message {
+        height: 70vh; /*768/1366*100*/
+    }
+    /*2_Skill_できること*/
+    .skill_menu {
+        display: block;
+    }
+    /*デザインスキル*/
+    .design_skill {
+        width: 55vw; /*841/1366*100*/
+    }
+    .icon_design {
+        display: none;
+    }
+    .skill_explanation01 p {
+        display: none;
+    }
+    .sp_icon_design {
+        display: inline;
+    }
+    .sp_icon_design ul {
+        display: flex;
+        justify-content: left;
+        padding: 20px 10px;
+    }
+    .sp_skill_item {
+        padding: 5px 0 5px 10px;
+    }
+    .sp_skill_item p {
+        width: 36.6vw; /*500/1366*100*/
+        line-height: 2;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    .star_gray {
+        color: #d6d6d6;
+    }
+    .sp_skill_explanation {
+        font-size: 15px;
+    }
+    /*コーディングスキル*/
+    .cording_skill {
+        width: 55vw; /*841/1366*100*/
+    }
+    .title_skill02 {
+        width: 22vw; /*310/1366*100*/
+        margin-top: 30px;
+    }
+    .icon_cording ul {
+        padding: 20px 10px;
+        margin: 0 auto;
+    }
+    .skill_item p {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .skill_explanation02 p {
+        width: 55vw;
+        margin: 0 auto;
+    }
+}
+/*レスポンシブ750px~*/
+@media screen and (max-width: 750px) {
+    /*フッター*/
+    .header_global_nav {
+        width: 100vw;
+    }
+    .pc_nav {
+        display: none;
+    }
+    .sp_btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        height: 33px;
+        z-index: 999;
+    }
+    .sp_btn span {
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        display: block;
+        position: relative;
+        top: 15px;
+        transition: 0.3s; /*アニメーションになる*/
+    }
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: "";
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        display: block;
+        position: absolute;
+        transition: 0.3s; /*アニメーションになる*/
+    }
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+    .sp_btn span::after {
+        top: 10px;
+    }
+    .open span {
+        background: transparent; /*背景色透明*/
+    }
+    .open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    .sp_nav {
+        /*background: rgb(208, 188, 212, 60%);
+        /*background: rgb(154, 159, 255, 60%);*/
+        /*background: rgb(255, 124, 24, 70%);*/
+        /*background: rgb(147, 16, 105, 60%);*/
+        background: rgb(0, 0, 63, 80%);
+        /*background: rgba(0, 0, 0, 60%);*/
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .sp_nav ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sp_nav ul li {
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    /*1_About_自己紹介*/
+    .self_introduction {
+        display: block;
+        margin-top: 30px;
+    }
+    /*画像[好きな〇〇]*/
+    .favorite {
+        width: 70vw;
+    }
+    .favorite img {
+        width: 100%;
+    }
+    .favorite_title {
+        font-size: 6vw;
+    }
+    .favorite_item {
+        font-size: 4vw;
+    }
+    .favorite_item01 {
+        width: 40%;
+    }
+    .favorite_item02 {
+        width: 40%;
+    }
+    .favorite_item03 {
+        width: 45%;
+    }
+    .favorite_item04 {
+        width: 60%;
+    }
+    /*詳細[名称/事業内容..]*/
+    .explanation {
+        width: 70vw;
+        margin: 0 auto;
+    }
+    /*文章[私の名前の由来で..]*/
+    .message {
+        width: 100%;
+        display: block;
+        background-image: none;
+    }
+    .pc_message {
+        display: none;
+    }
+    .spme {
+        display: inline;
+        text-align: center;
+        position: relative;
+    }
+    .spme img {
+        vertical-align: top;
+    }
+    .sp_message {
+        position: absolute;
+        top: 250px;
+        left: 0;
+        width: 100%;
+        display: inline;
+        font-size: 35px;
+        font-family: "Yu Mincho";
+        color: #0094ff;
+        line-height: 2.1; /*38/18*/
+        text-align: center;
+        font-feature-settings: "palt";
+        letter-spacing: 0.05em; /*50/1000*/
+        margin: 0 auto;
+    }
+    /*2_Skill_できること*/
+    .contents2 {
+        padding-top: 55vh;
+    }
+    .icon_cording ul {
+        display: none;
+    }
+    .sp_icon_conrding {
+        display: inline;
+    }
+    .sp_icon_conrding ul {
+        display: flex;
+    }
+
+    /*4_お問い合わせ*/
+    .select {
+        width: 55vw;
+    }
+}

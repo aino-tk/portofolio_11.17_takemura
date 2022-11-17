@@ -1,0 +1,308 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #333;
+    font-family: "Noto Sans JP", "sans-serif";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+.body {
+    max-width: 1500px;
+}
+/*ヘッダー*/
+.header {
+    width: 100%;
+}
+/*グローバルナビ*/
+.header_global_nav {
+    position: fixed;
+    width: 100%;
+    background: #6b9bd6;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+.logo01 ul {
+    display: flex;
+}
+.logo_name {
+    font-size: 25px;
+    line-height: 1.4; /*35/25*/
+    color: #fff;
+}
+.pc_nav {
+    width: 53%; /*710/1366*100*/
+}
+.pc_nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+.pc_nav li {
+    font-size: 20px;
+    line-height: 1.75; /*35/20*/
+    color: #fff;
+}
+.nav_contact {
+    font-size: 26px;
+    line-height: 1.73; /*45/26*/
+}
+.sp_nav,
+.sp_btn {
+    display: none;
+}
+/*見出し設定*/
+.title {
+    margin: 0 auto;
+    width: 40vw; /*556/1366*100*/
+    height: 120px; /*画像の高さ*/
+    background-image: url(../images/line_brush.png);
+    background-repeat: no-repeat; /*画像が繰り返すのを防ぐ*/
+    background-position: center center; /*画像を中央寄せ*/
+    background-size: 100% auto; /*背景画像を要素に合わせて表示*/
+    text-align: center;
+}
+.title_name {
+    font-size: 61px; /*61/1366*100*/
+    line-height: 1.75; /*107/61*/
+    color: #0094ff;
+}
+.subtitle {
+    font-size: 17px;
+    line-height: 1.7; /*29/17*/
+    color: #0094ff;
+}
+
+/*3_Works_作品実績*/
+.contents3 {
+    padding-top: 150px;
+}
+.works_menu {
+    width: 80.8vw; /*1105/1366*100*/
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.caption {
+    font-size: 20px;
+    line-height: 1.75; /*35/20*/
+    color: #0094ff;
+    margin-top: 40px;
+    border-bottom: 1px solid #0094ff;
+}
+.gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
+.contents img {
+    width: 36.6vw; /*500/1366*100*/
+    background-color: rgb(0, 148, 255, 10%);
+    padding: 20px 5px 0 5px;
+    margin: 40px 0 5px 0;
+}
+.contents p {
+    width: 36.3vw;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #0094ff;
+    padding: 5px 0 5px 10px;
+    border-left: 4px solid #0094ff;
+    margin: 0 auto;
+}
+.button01 {
+    margin-top: 50px;
+}
+.button01 a {
+    display: inline-block;
+    background: rgb(208, 188, 212, 60%);
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 185px;
+    padding: 25px 60px;
+    transition: 0.3s ease-in-out;
+    background-image: url(../images/icon_mail01.png);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: left 25px top 50%;
+}
+.button01 a span {
+    margin-right: 10px;
+}
+
+.button01 a:hover {
+    background: #cfbbd3;
+    color: #fff;
+    background-image: url(../images/icon_mail02.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: left 30px top 50%;
+}
+.button01 a:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.button01 a:hover:after {
+    border-color: #fff;
+}
+
+/*トップへ戻るボタン*/
+.page-top {
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+    height: 20px;
+    text-decoration: none;
+    transform: rotate(90deg);
+    font-size: 18px;
+    line-height: 1.5rem;
+    color: #737373;
+    padding: 0 0 0 100px;
+    border-top: solid 2px;
+}
+.page-top:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -4px;
+    left: -15px;
+    width: 15px;
+    border-top: solid 2px;
+    transform: rotate(150deg);
+    transform-origin: right bottom;
+}
+.page-top span {
+    position: absolute;
+    top: -25px;
+    right: 10px;
+}
+
+/*レスポンシブ750px~*/
+@media screen and (max-width: 750px) {
+    /*フッター*/
+    .header_global_nav {
+        width: 100vw;
+    }
+    .pc_nav {
+        display: none;
+    }
+    .sp_btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        height: 33px;
+        z-index: 999;
+    }
+    .sp_btn span {
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        display: block;
+        position: relative;
+        top: 15px;
+        transition: 0.3s; /*アニメーションになる*/
+    }
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: "";
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        display: block;
+        position: absolute;
+        transition: 0.3s; /*アニメーションになる*/
+    }
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+    .sp_btn span::after {
+        top: 10px;
+    }
+    .open span {
+        background: transparent; /*背景色透明*/
+    }
+    .open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    .sp_nav {
+        /*background: rgb(208, 188, 212, 60%);
+        /*background: rgb(154, 159, 255, 60%);*/
+        /*background: rgb(255, 124, 24, 70%);*/
+        /*background: rgb(147, 16, 105, 60%);*/
+        background: rgb(0, 0, 63, 80%);
+        /*background: rgba(0, 0, 0, 60%);*/
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .sp_nav ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sp_nav ul li {
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+}

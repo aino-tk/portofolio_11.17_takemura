@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あい乃デザイン</title>
+    <meta name="description" content="ポートフォリオサイト">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+    <!--ヘッダー-->
+    <header class="header" id="header">
+        <div class="bird"></div>
+        <div class="bird -type_2"></div>
+        <div class="bird -type_3"></div>
+        <div class="header_wrap">
+            <div class="header_global_nav" id="header_nav">
+                <h1 class="logo">
+                    <a class="logo01" href="#message">
+                        <ul>
+                            <li><img src="" alt="ロゴ"></li>
+                            <li class="logo_name">あい乃デザイン</li>
+                        </ul>
+                    </a>
+                </h1>
+                <nav class="pc_nav">
+                    <ul>
+                        <li><a href="#header">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skill">Skill</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li class="#nav_contact"><a href="#contact">Contact</a></li>
+                        <li><a href="https://www.instagram.com/chesya_neko/">
+                                <img src="images/logo_instagram.png" alt="インスタグラムロゴ">
+                            </a></li>
+                    </ul>
+                </nav>
+                <!--スマホ用のボタン-->
+                <div class="sp_btn"><span></span></div>
+                <!--sp_nav＝スマホ用のナビゲーション-->
+                <nav class="sp_nav">
+                    <ul>
+                        <li><a href="#header">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skill">Skill</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#nav_contact">Contact</a></li>
+                        <li><a href="https://www.instagram.com/chesya_neko/">
+                                <img src="images/logo_instagram.png" alt="インスタグラムロゴ">
+                            </a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="catch_copy">
+                海の彼方まで<br>愛(おもい)を<br>とどけ、つなげる<br>
+                デザインを<br class="br_none">つくりたい。
+            </p>
+        </div>
+    </header>
+    <!--About_自己紹介-->
+    <section class="contents1" id="about">
+        <div class="title">
+            <h2 class="title_name">About</h2>
+            <h3 class="subtitle">自己紹介</h3>
+        </div>
+        <div class="self_introduction">
+            <div class="favorite">
+                <img src="images/about_phot.png" alt="自分の写真">
+                <div class="favorite_text">
+                    <p class="favorite_title">好きな〇〇</p>
+                    <div class="favorite_item">
+                        <p class="favorite_item01">猫。。</p>
+                        <p class="favorite_item02">海。。</p>
+                        <p class="favorite_item03">音楽。。</p>
+                        <p class="favorite_item04">食べること。。</p>
+                    </div>
+                </div>
+            </div>
+            <dl class="explanation">
+                <!--dl要素→dt要素(用語),dd要素(その用語に対する説明)を伴う-->
+                <dt>名称</dt>
+                <dd class="explanation_border">あい乃デザイン</dd>
+                <dt>事業内容</dt>
+                <dd class="explanation_border">バナー制作<br>Webサイト制作<br>(デザイン/HTML・CSSコーディング)</dd>
+                <dt>プロフィール</dt>
+                <dd>1994年12月24日生まれ。長崎県-五島列島出身。<br>
+                    前職の飲食業、営業職の経験から、お客様に寄り添ったヒアリングを
+                    大切にしています。ニーズやご希望を明確にし、目的に適うご提案が
+                    できるよう心がけています。<br><br>
+                    2022年5月<br>ご縁をいただき、Webデザイナーの活動を独学で始める。<br>
+                    2022年8月～<br>Webデザイナー育成スクール『デザスタ』に通い始める。<br>
+                    デザイン・コーディングを学びさらに活動の幅を広げていけるよう日々勉強中。
+                </dd>
+                <dt>竹村　愛乃</dt>
+                <dd>Takemura Aino</dd>
+                <dt>Instagram</dt>
+                <dd>chesya_neko</dd>
+            </dl>
+        </div>
+        <div class="message" id="message">
+            <p class="pc_message">私の名前の由来である<br>
+                “たくさんの人から愛される人になって欲しい”<br>
+                というおもいからあい乃デザインと名付けました。<br>
+                デザインを通して、『愛される〇〇づくり』の<br>
+                お手伝いをさせていただけましたら幸いです。</p>
+            <div class="spme">
+                <img src="images/about_circle00.png" alt="ぼかしの丸">
+                <p class="sp_message">私の名前の由来である<br><br>
+                    “たくさんの人から<br>
+                    愛される人になって欲しい”<br><br>
+                    というおもいから<br>
+                    あい乃デザインと名付けました。<br><br>
+                    デザインを通して、<br>
+                    『愛される〇〇づくり』の<br>
+                    お手伝いをさせて<br>
+                    いただけましたら幸いです。</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Skill_できること-->
+    <section class="contents2" id="skill">
+        <div class="title">
+            <h2 class="title_name">Skill</h2>
+            <h3 class="subtitle">できること</h3>
+        </div>
+        <div class="skill_content">
+            <p class="description_skill">お客様のご要望に合わせてPhotoshop/Illustratorを用いてデザインを作成いたします。<br>
+                WEBサイト制作では、デザインに加え主にCSS/HTMLを用いてコーディングまでお手伝いさせていただきます。<br>
+                JavaScriptで動きを実装することもできます。お気軽に<span class="under"><a href="#contact">お問い合わせ</a></span>ください。</p>
+            <div class="skill_menu">
+                <!--デザイン-->
+                <div class="design_skill">
+                    <div class="title_skill01">Design skill</div>
+                    <div class="icon_design">
+                        <ul>
+                            <li class="skill_item">
+                                <img src="images/icon_skill01.png" alt="Psアイコン">
+                                <p>Photoshop</p>
+                                <p class="star"><span class="star_blue">★★</span>★★★</p>
+                            </li>
+                            <li class="skill_item">
+                                <img src="images/icon_skill02.png" alt="Aiアイコン">
+                                <p>Illustrator</p>
+                                <p class="star"><span class="star_blue">★★★</span>★★</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill_explanation01">
+                        <p>写真の補正・加工を用いたバナーの作成が可能です。</p>
+                        <p class="ai">バナー・LP・Webサイトを作成することができます。</p>
+                    </div>
+                    <!--デザイン_スマホ-->
+                    <div class="sp_skill_menu">
+                        <div class="sp_icon_design">
+                            <ul>
+                                <li><img src="images/icon_skill01.png" alt="Psアイコン"></li>
+                                <li class="sp_skill_item">
+                                    <p><span class="bold">Photoshop</span>　<span class="star_blue">★★</span><span
+                                            class="star_gray">★★★</span></p>
+                                    <p class="sp_skill_explanation">写真の補正・加工を用いたバナーの作成が可能です。</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><img src="images/icon_skill02.png" alt="Aiアイコン"></li>
+                                <li class="sp_skill_item">
+                                    <p><span class="bold">Illustrator</span>　<span class="star_blue">★★★</span><span
+                                            class="star_gray">★★</span></p>
+                                    <p class="sp_skill_explanation">バナー・LP・Webサイトを作成することができます。</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--コーディング-->
+                <div class="cording_skill">
+                    <div class="title_skill02">Cording skill</div>
+                    <div class="icon_cording">
+                        <ul>
+                            <li class="skill_item">
+                                <img src="images/icon_skill03.png" alt="CSSアイコン">
+                                <p>CSS</p>
+                                <p class="star"><span class="star_blue">★★</span>★★★</p>
+                            </li>
+                            <li class="skill_item">
+                                <img src="images/icon_skill04.png" alt="HTMLアイコン">
+                                <p>HTML</p>
+                                <p class="star"><span class="star_blue">★★</span>★★★</p>
+                            </li>
+                            <li class="skill_item">
+                                <img src="images/icon_skill05.png" alt="JSアイコン">
+                                <p>JavaScript</p>
+                                <p class="star"><span class="star_blue">★</span>★★★★</p>
+                            </li>
+                        </ul>
+                        <div class="sp_icon_conrding">
+                            <ul>
+                                <li><img src="images/icon_skill03.png" alt="CSSアイコン"></li>
+                                <li class="sp_skill_item">
+                                    <p><span class="bold">CSS</span>　<span class="star_blue">★★</span><span
+                                            class="star_gray">★★★</span></p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><img src="images/icon_skill04.png" alt="HTMLアイコン"></li>
+                                <li class="sp_skill_item">
+                                    <p><span class="bold">HTML</span>　<span class="star_blue">★★</span><span
+                                            class="star_gray">★★★</span></p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><img src="images/icon_skill05.png" alt="JSアイコン"></li>
+                                <li class="sp_skill_item">
+                                    <p><span class="bold">JavaScript</span>　<span class="star_blue">★</span><span
+                                            class="star_gray">★★★★</span></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="skill_explanation02">
+                            <p>レスポンシブデザインに対応したランディングページやWebサイ
+                                トを作成することができます。またアニメーションなども実装可能
+                                なので、動きのあるサイトに仕上げることも可能です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Works_作品実績-->
+        <section class="contents3" id="works">
+            <div class="title">
+                <h2 class="title_name">Works</h2>
+                <h3 class="subtitle">作品実績</h3>
+            </div>
+            <div class="works_menu">
+                <div class="works_slider">
+                    <div class="slider multiple-items">
+                        <div class="works_item">
+                            <img src="images/PF_work_banner_01_code.png" alt="化粧品バナー">
+                            <div>
+                                <h4 class="works_title">バナー制作</h4>
+                                <p class="content_title">制作期間</p>
+                                <p class="detail">1週間</p>
+                                <p class="content_title">担当範囲</p>
+                                <p class="detail">デザイン</p>
+                                <p class="content_title">制作費用</p>
+                                <p class="detail">￥5,000</p>
+                            </div>
+                        </div>
+                        <div class="works_item">
+                            <img src="images/PF_work_banner_02_code.png" alt="キャンプバナー">
+                            <div>
+                                <h4 class="works_title">バナー制作</h4>
+                                <p class="content_title">制作期間</p>
+                                <p class="detail">1週間</p>
+                                <p class="content_title">担当範囲</p>
+                                <p class="detail">デザイン</p>
+                                <p class="content_title">制作費用</p>
+                                <p class="detail">￥5,000</p>
+                            </div>
+                        </div>
+                        <div class="works_item">
+                            <img src="images/PF_work_LP_01_code.png" alt="美容室LP">
+                            <div>
+                                <h4 class="works_title">LPサイト制作(カンプのみ)</h4>
+                                <p class="content_title">制作期間</p>
+                                <p class="detail">1週間</p>
+                                <p class="content_title">担当範囲</p>
+                                <p class="detail">デザイン</p>
+                                <p class="content_title">制作費用</p>
+                                <p class="detail">￥30,000~</p>
+                            </div>
+                        </div>
+                        <div class="works_item">
+                            <img src="images/PF_work_LP_02_code.png" alt="スクールLP">
+                            <div>
+                                <h4 class="works_title">LPサイト制作(カンプのみ)</h4>
+                                <p class="content_title">制作期間</p>
+                                <p class="detail">1週間</p>
+                                <p class="content_title">担当範囲</p>
+                                <p class="detail">デザイン</p>
+                                <p class="content_title">制作費用</p>
+                                <p class="detail">￥30,000~</p>
+                            </div>
+                        </div>
+                        <div class="works_item">
+                            <img src="images/PF_work_website_02_code.png" alt="カフェWebサイト">
+                            <div>
+                                <h4 class="works_title">Webサイト制作</h4>
+                                <p class="content_title">制作期間</p>
+                                <p class="detail">2週間</p>
+                                <p class="content_title">担当範囲</p>
+                                <p class="detail">コーディング</p>
+                                <p class="content_title">制作費用</p>
+                                <p class="detail">￥50,000~</p>
+                            </div>
+                        </div>
+                        <div class="works_item">
+                            <img src="images/PF_work_portfoliosite_code.png" alt="ポートフォリオサイト">
+                            <div>
+                                <h4 class="works_title">ポートフォリオサイト制作</h4>
+                                <p class="content_title">制作期間</p>
+                                <p class="detail">2ヶ月</p>
+                                <p class="content_title">担当範囲</p>
+                                <p class="detail">デザイン/コーディング</p>
+                                <p class="content_title">制作費用</p>
+                                <p class="detail">￥100,000~</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button01">
+                <a href="works.html">一覧を見る</a>
+            </div>
+            <!--フッター-->
+            <footer class="footer">
+                <div class="contents4_footer_nav">
+                    <!--Contact_お問い合わせ-->
+                    <section class="contents4" id="contact">
+                        <div class="title">
+                            <h2 class="title_name">Contact</h2>
+                            <h3 class="subtitle">お問い合わせ</h3>
+                        </div>
+                        <div class="contents4_detail">
+                            <p class="contact_message">ポートフォリオをご覧いただきましてありがとうございます。<br>
+                                制作のご依頼やご相談などお気軽にお問い合わせくださいませ。<br>
+                                お問い合わせいただいた内容は確認後、3営業日以内にご連絡させていただきます。</p>
+                            <form class="contact_form" action="送信ボタンを押した後移動するURLを貼る" method="post">
+                                <!--URL入れる-->
+                                <select class="select" name="choose">
+                                    <option value="design">デザインについてのご相談・ご質問</option>
+                                    <option value="coding">コーディングについてのご相談・ご質問</option>
+                                    <option value="website">Webサイト制作についてのご相談・ご質問</option>
+                                    <option value="others">その他</option>
+                                </select>
+                                <label class="contact_title" for="name">
+                                    <ul>
+                                        <li>お名前 (貴社名)</li>
+                                        <li>
+                                            <div class="required">必須</div>
+                                        </li>
+                                    </ul>
+                                </label>
+                                <input class="space" id="name" type="text" name="yourname" placeholder="田中　花子">
+                                <br><label class="contact_title" for="name_assistance">フリガナ</label>
+                                <br><input class="space" id="name_assistance" type="text" name="yourname"
+                                    placeholder="タナカ　ハナコ">
+                                <br><label class="contact_title" for="mail">メールアドレス</label>
+                                <br><input class="space" id="mail" type="email" name="mail"
+                                    placeholder="info@example.com">
+                                <br><label class="contact_title" for="tel">
+                                    <ul>
+                                        <li>電話番号</li>
+                                        <li>
+                                            <div class="required">必須</div>
+                                        </li>
+                                    </ul>
+                                </label>
+                                <input class="space" id="tel" type="text" name="tel" placeholder="090-1234-5678">
+                                <br><label class="contact_title" for="comment">
+                                    <ul>
+                                        <li>お問い合わせの内容</li>
+                                        <li>
+                                            <div class="required">必須</div>
+                                        </li>
+                                    </ul>
+                                </label>
+                                <br><textarea class="textarea" id="comment" name="comment"
+                                    placeholder="こちらにお問い合わせ内容を記入してください。"></textarea>
+                                <br>
+                                <div class="button02">
+                                    <a href="#">内容を送信する</a>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <!--フッターナビ-->
+                    <div class="logo_fotter">
+                        <a class="logo01_fotter" href="#message">
+                            <ul>
+                                <li><img src="" alt="ロゴ"></li>
+                                <li class="logo_name_fotter">あい乃デザイン</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <nav class="pc_nav_footer">
+                        <ul>
+                            <li><a href="#header">Top</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skill">Skill</a></li>
+                            <li><a href="#works">Works</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="https://www.instagram.com/chesya_neko/">
+                                    <img src="images/logo_instagram.png" alt="インスタグラムロゴ">
+                                </a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </footer>
+
+            <script>
+                $(function () {
+                    //ヘッダー固定と背景色変更
+                    $(window).on('scroll', function () {
+                        if (650 < jQuery(this).scrollTop()) {
+                            jQuery('.header_global_nav').addClass('change-color');
+                        } else {
+                            jQuery('.header_global_nav').removeClass('change-color');
+                        }
+                    });
+                    //ハンバーガーメニュー
+                    $(".sp_btn,.sp_nav li").on("click", function () {
+                        $(".sp_nav").fadeToggle();
+                        $(".sp_btn").toggleClass("open");
+                    });
+
+                    //スライダー処理
+                    $('.multiple-items').slick({
+                        infinite: true,
+                        slidesToShow: 3, //一度に表示するスライド数
+                        slidesToScroll: 3, //1回のスライドで移動するスライド数
+                        dots: true,
+                        responsive: [
+                            {
+                                breakpoint: 1063, //1063px以下で適用
+                                settings: {
+                                    slidesToShow: 2,
+                                    slidesToScroll: 2,
+                                },
+                            },
+                            {
+                                breakpoint: 750, //750px以下で適用
+                                settings: {
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1,
+                                },
+                            },
+                        ]
+                    });
+                }
+                ); 
+            </script>
+</body>
+
+</html>

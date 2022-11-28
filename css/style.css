@@ -46,7 +46,7 @@ img {
 .body {
     max-width: 1500px;
 }
-/*ヘッダー*/
+/*index.html-ヘッダー*/
 .header {
     width: 100%;
     height: 100vh;
@@ -65,6 +65,7 @@ img {
 }
 .bird.-type_2 {
     animation-delay: 1s;
+    left: -5vw;
 }
 .bird.-type_2:before,
 .bird.-type_2:after {
@@ -72,6 +73,7 @@ img {
 }
 .bird.-type_3 {
     animation-delay: 3s;
+    left: -5vw;
 }
 @keyframes moving {
     0% {
@@ -258,7 +260,12 @@ img {
 .header_wrap {
     top: 0;
 }
-/*グローバルナビ*/
+/*works.htmlヘッダー*/
+.works-header {
+    width: 100%;
+}
+
+/*index.html-グローバルナビ*/
 .header_global_nav {
     position: fixed;
     height: 70px;
@@ -275,6 +282,11 @@ img {
 }
 .logo01 ul {
     display: flex;
+}
+.logo_mark {
+    width: 40px;
+    height: 40px;
+    padding-bottom: 5px;
 }
 .logo_name {
     font-size: 25px;
@@ -301,6 +313,18 @@ img {
 .sp_btn {
     display: none;
 }
+/*works.html-グローバルナビ*/
+.works-header_global_nav {
+    position: fixed;
+    width: 100%;
+    background: #6b9bd6;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
 /*縦文章[海の彼方まで..]*/
 .catch_copy {
     width: 23.2vw; /*318/1366*100=23.2*/
@@ -316,9 +340,38 @@ img {
 }
 
 /*見出し設定*/
+
+/*下から上へ*/
+.scroll_up {
+    transition: 1s ease-in-out;
+    transform: translateY(40px);
+    opacity: 0;
+}
+.scroll_up.on {
+    transform: translateY(0);
+    opacity: 1;
+}
+/*左から右へ*/
+.scroll_left {
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+    transform: translateX(-30px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+}
+.scroll_left.on {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    transform: translateX(0);
+}
+
 .title {
     margin: 0 auto;
-    width: 40vw; /*556/1366*100*/
+    width: 50vw; /*556/1366*100*/
     height: 120px; /*画像の高さ*/
     background-image: url(../images/line_brush.png);
     background-repeat: no-repeat; /*画像が繰り返すのを防ぐ*/
@@ -447,6 +500,10 @@ img {
     margin-left: 12vw; /*158/1366*100*/
     margin-bottom: 4%; /*25/709*100*/
 }
+.instagram_link:hover {
+    color: #0094ff;
+    font-weight: bold;
+}
 .explanation_border {
     border-bottom: 1px solid #0094ff;
     content: "";
@@ -454,13 +511,15 @@ img {
     padding-bottom: 20px;
 }
 /*文章[私の名前の由来で..]*/
+/*background-size→containに変更、高さを可変か、アスペクトラティオ縦横比率で調整*/
 .message {
     width: 93vw; /*1264/1366*100*/
     height: 768px; /*画像の高さ*/
     background-image: url(../images/about_ellipse.png);
     background-repeat: no-repeat; /*画像が繰り返すのを防ぐ*/
     background-position: center center; /*画像を中央寄せにする*/
-    background-size: 100% auto; /*背景画像を要素に合わせて表示*/
+    /*background-size: 100% auto; /*背景画像を要素に合わせて表示*/
+    background-size: contain;
     vertical-align: top;
     display: flex;
     justify-content: center;
@@ -588,7 +647,7 @@ img {
     display: none;
 }
 
-/*3_Works_作品実績*/
+/*index.html-3_Works_作品実績*/
 .contents3 {
     margin-top: 50px;
     padding-top: 100px;
@@ -660,11 +719,124 @@ img {
 .button01 a:hover:after {
     border-color: #fff;
 }
+/*works.html-3_Works_作品実績*/
+.works-contents3 {
+    padding-top: 150px;
+}
+.works-works_menu {
+    width: 80.8vw; /*1105/1366*100*/
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.caption {
+    font-size: 20px;
+    line-height: 1.75; /*35/20*/
+    color: #0094ff;
+    margin-top: 40px;
+    border-bottom: 1px solid #0094ff;
+}
+.gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
+.contents img {
+    width: 36.6vw; /*500/1366*100*/
+    background-color: rgb(0, 148, 255, 10%);
+    padding: 20px 5px 0 5px;
+    margin-top: 40px;
+}
+.contents p {
+    width: 36.3vw;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #0094ff;
+    padding: 5px 0 5px 10px;
+    border-left: 4px solid #0094ff;
+    margin: 0 auto;
+}
+.works-button01 {
+    margin-top: 50px;
+}
+.works-button01 a {
+    display: inline-block;
+    background: rgb(208, 188, 212, 60%);
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 185px;
+    padding: 25px 60px;
+    transition: 0.3s ease-in-out;
+    background-image: url(../images/icon_mail01.png);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: left 25px top 50%;
+}
+.works-button01 a:hover {
+    background: #cfbbd3;
+    color: #fff;
+    background-image: url(../images/icon_mail02.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: left 30px top 50%;
+}
+.works-button01 a:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.works-button01 a:hover:after {
+    border-color: #fff;
+}
+.works-button01 br {
+    display: none;
+}
+
+/*works.index-トップへ戻るボタン*/
+.page-top {
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+    height: 20px;
+    text-decoration: none;
+    transform: rotate(90deg);
+    font-size: 18px;
+    line-height: 1.5rem;
+    color: #737373;
+    padding: 0 0 0 100px;
+    border-top: solid 2px;
+}
+.page-top:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -4px;
+    left: -15px;
+    width: 15px;
+    border-top: solid 2px;
+    transform: rotate(150deg);
+    transform-origin: right bottom;
+}
+.page-top span {
+    position: absolute;
+    top: -25px;
+    right: 10px;
+}
 
 /*フッター*/
 .footer {
     width: 100%;
-    height: 260vh;
+    height: 240vh;
     background-image: url(../images/footer_sea_code.png);
     background-repeat: no-repeat; /*画像を繰り返し表示しない*/
     background-position: center center; /*画像を常に天地左右中央配置*/
@@ -720,11 +892,10 @@ img {
 }
 .contact_title {
     line-height: 1.75; /*28/16*/
+    vertical-align: bottom;
 }
-.contact_title ul {
+.contact_title p {
     display: flex;
-}
-.contact_title li {
     font-size: 16px;
     line-height: 1.75; /*28/16*/
 }
@@ -735,7 +906,7 @@ img {
     background-color: #ff9290;
     color: #fff;
     text-align: center;
-    line-height: 1.75;
+    line-height: 30px;
     padding: 0 20px;
     margin: 0 0 5px 10px;
 }
@@ -816,6 +987,9 @@ img {
     color: #fff;
     font-size: 20px;
     line-height: 1.75; /*35/20*/
+}
+.sp_nav_footer {
+    display: none;
 }
 
 /*レスポンシブ1100px~*/
@@ -927,9 +1101,14 @@ img {
         margin: 0 auto;
     }
 }
-/*レスポンシブ750px~*/
+/*index.html-レスポンシブ750px~*/
 @media screen and (max-width: 750px) {
     /*フッター*/
+    .header {
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/PF_sea_750px.jpg);
+    }
     .header_global_nav {
         width: 100vw;
     }
@@ -1006,6 +1185,7 @@ img {
         padding: 10px 0;
         font-size: 18px;
     }
+
     /*1_About_自己紹介*/
     .self_introduction {
         display: block;
@@ -1087,8 +1267,166 @@ img {
         display: flex;
     }
 
+    /*フッター*/
+    .footer {
+        width: 100%;
+        height: 130vh;
+        background-image: url(../images/sp_footer750×1330.png);
+    }
+
     /*4_お問い合わせ*/
+    .contents4_detail {
+        width: 93.3vw; /*700/750*100*/
+        margin: 0 auto;
+    }
     .select {
-        width: 55vw;
+        width: 73.3vw; /*550/750*100*/
+    }
+    .contact_message {
+        font-size: 15px;
+    }
+    .contact_form {
+        margin-top: 60px;
+        width: 80%;
+    }
+    .space {
+        width: 73.3vw;
+    }
+    .textarea {
+        width: 73.3vw;
+    }
+
+    .pc_nav_footer {
+        display: none;
+    }
+    .sp_nav_footer {
+        display: block;
+        margin-top: 10px;
+    }
+    .sp_nav_footer ul {
+        margin: 0 auto;
+        width: 30vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sp_nav_footer li {
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.75;
+    }
+    .button02 {
+        margin-top: 5vw;
+        width: 70vw;
+    }
+    .button02 a {
+        font-size: 16px;
+        padding: 10px 40px;
+    }
+    /*フッターナビ*/
+    .logo_fotter {
+        margin-top: 8vh;
+    }
+}
+
+/*index.html-レスポンシブ550px~*/
+@media screen and (max-width: 550px) {
+    .select {
+        width: 56.5vw; /*212/375*100*/
+    }
+}
+
+/*index.html-レスポンシブ412px~*/
+@media screen and (max-width: 412px) {
+    .logo_mark {
+        width: 7.7vw; /*32/412*100*/
+    }
+    .logo_name {
+        font-size: 6vw; /*25/412*100*/
+    }
+}
+
+/*index.html-レスポンシブ375px~*/
+@media screen and (max-width: 375px) {
+    .header {
+        width: 100%;
+        height: 120vh;
+        background-image: url(../images/PF_sea_375px.jpg);
+    }
+
+    /*見出し設定*/
+    .title {
+        margin: 0 auto;
+        width: 70vw;
+        height: 120px; /*画像の高さ*/
+        background-image: url(../images/line_brush.png);
+        background-repeat: no-repeat; /*画像が繰り返すのを防ぐ*/
+        background-position: center center; /*画像を中央寄せ*/
+        background-size: 100% auto; /*背景画像を要素に合わせて表示*/
+        text-align: center;
+    }
+    .title_name {
+        font-size: 38px;
+        line-height: 2.2;
+        color: #0094ff;
+    }
+    .subtitle {
+        font-size: 17px;
+        line-height: 1.7; /*29/17*/
+        color: #0094ff;
+    }
+
+    /*フッター*/
+    .footer {
+        width: 100%;
+        height: 250vh; /*1500/375*100*/
+        background-image: url(../images/PF_sea_02_resize_375×1500.jpg);
+    }
+    /*フッターナビ*/
+    .logo_fotter {
+        margin-top: 5vh;
+    }
+}
+
+/*works.html-レスポンシブ750px~*/
+@media screen and (max-width: 750px) {
+    /*フッター*/
+    .works-header_global_nav {
+        width: 100vw;
+    }
+    /*works.index-トップへ戻るボタン*/
+    .page-top {
+        right: -15px;
+    }
+}
+/*works.html-レスポンシブ550px~*/
+@media screen and (max-width: 550px) {
+    /*3_Works_作品実績*/
+    .gallery ul {
+        display: block;
+        text-align: center;
+    }
+    .contents img {
+        width: 70vw;
+    }
+    .contents p {
+        width: 69vw;
+        text-align: left;
+    }
+    .works-button01 a {
+        width: 36.3vw; /*200/550*100*/
+    }
+    .works-button01 a span {
+        margin-right: 0;
+        font-size: 15px;
+    }
+}
+/*works.html-レスポンシブ412px~*/
+@media screen and (max-width: 412px) {
+    /*3_Works_作品実績*/
+    /*.works-button01 span {
+        text-align: center;
+    }*/
+    .works-button01 br {
+        display: inline;
     }
 }

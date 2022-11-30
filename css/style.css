@@ -939,26 +939,28 @@ img {
 .button02 {
     margin-top: 100px;
 }
-.button02 a {
+.button02 {
     background: #931069;
     border-radius: 50px;
+    border: none;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    max-width: 150px;
+    max-width: 250px;
+    margin-top: 10px;
     padding: 15px 45px;
     transition: 0.3s ease-in-out;
     color: #fff;
     font-size: 20px;
     line-height: 1.75; /*42/24*/
 }
-.button02 a:hover {
+.button02:hover {
     background: #cfbbd3;
     color: #fff;
 }
-.button02 a:after {
+.button02:after {
     content: "";
     width: 5px;
     height: 5px;
@@ -971,7 +973,7 @@ img {
     border-radius: 1px;
     transition: 0.3s ease-in-out;
 }
-.button02 a:hover:after {
+.button02:hover:after {
     border-color: #fff;
 }
 /*フッターナビ*/

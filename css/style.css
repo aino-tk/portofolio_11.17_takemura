@@ -273,7 +273,7 @@ img {
     z-index: 999;
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 20px 20px;
     box-sizing: border-box;
     transition: background-color 1s ease-in-out;
 }
@@ -284,17 +284,21 @@ img {
     display: flex;
 }
 .logo_mark {
-    width: 40px;
-    height: 40px;
-    padding-bottom: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 1;
 }
 .logo_name {
     font-size: 25px;
-    line-height: 1.4; /*35/25*/
+    line-height: 1.2;
     color: #fff;
 }
 .pc_nav {
     width: 53%; /*710/1366*100*/
+}
+.instagram_logo {
+    width: 30px;
+    width: 30px;
 }
 .pc_nav ul {
     display: flex;
@@ -302,7 +306,7 @@ img {
 }
 .pc_nav li {
     font-size: 20px;
-    line-height: 1.75; /*35/20*/
+    line-height: 1.5; /*35/20*/
     color: #fff;
 }
 .nav_contact {
@@ -323,6 +327,10 @@ img {
     justify-content: space-between;
     padding: 20px 40px;
     box-sizing: border-box;
+}
+.instagram_logo {
+    width: 30px;
+    width: 30px;
 }
 
 /*縦文章[海の彼方まで..]*/
@@ -513,7 +521,7 @@ img {
 /*文章[私の名前の由来で..]*/
 /*background-size→containに変更、高さを可変か、アスペクトラティオ縦横比率で調整*/
 .message {
-    width: 93vw; /*1264/1366*100*/
+    width: 100%; /*1264/1366*100=93vw*/
     height: 768px; /*画像の高さ*/
     background-image: url(../images/about_ellipse.png);
     background-repeat: no-repeat; /*画像が繰り返すのを防ぐ*/
@@ -566,10 +574,12 @@ img {
 }
 /*左_デザインスキル*/
 .design_skill {
-    width: 24vw; /*325/1366*100*/
+    /*width: 24vw; /*325/1366*100*/
+    width: 100%;
+    padding-bottom: 30px;
 }
 .title_skill01 {
-    width: 22vw; /*310/1366*100*/
+    width: 21vw; /*310/1366*100*/
     height: 37px;
     border-radius: 9999px;
     background-color: #0094ff;
@@ -591,9 +601,10 @@ img {
 }
 .skill_item {
     width: 9.5vw; /*130/1366*100*/
+    text-align: center;
 }
 .skill_item p {
-    text-align: center;
+    /*text-align: center;*/
     margin-top: 25px;
 }
 .star {
@@ -605,7 +616,7 @@ img {
     color: #9ccee5;
 }
 .skill_explanation01 {
-    width: 24vw; /*330/1366*100*/
+    width: 23vw;
     display: flex;
     justify-content: space-between;
 }
@@ -620,10 +631,11 @@ img {
 }
 /*右_コーディングスキル*/
 .cording_skill {
-    width: 33vw; /*455/1366*100*/
+    /*width: 33vw; /*455/1366*100*/
+    width: 60%;
 }
 .title_skill02 {
-    width: 32vw; /*442/1366*100*/
+    width: 33vw; /*442/1366*100*/
     height: 37px;
     border-radius: 9999px;
     background-color: #0094ff;
@@ -642,6 +654,7 @@ img {
     margin-top: 30px;
     line-height: 1.3;
     padding-right: 50px;
+    font-feature-settings: "palt";
 }
 .sp_icon_conrding {
     display: none;
@@ -841,6 +854,7 @@ img {
     background-repeat: no-repeat; /*画像を繰り返し表示しない*/
     background-position: center center; /*画像を常に天地左右中央配置*/
     /*background-attachment: fixed; /*コンテンツの高さが画像の高さより大きい時動かないように固定*/
+    background-size: contain;
     background-size: cover; /*表示する大きさに基づいて背景画像を調整*/
 }
 .contents4_footer_nav {
@@ -992,6 +1006,43 @@ img {
     display: none;
 }
 
+/*レスポンシブ~1500px*/
+@media screen and (min-width: 1500px) {
+    .contents1 {
+        padding-top: 100px;
+        width: 100%;
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+    .explanation {
+        margin: 50px 20px 0 50px;
+    }
+    .self_introduction {
+        width: 100%;
+    }
+    .favorite img {
+        max-width: 160%;
+    }
+    .favorite_title {
+        font-size: 25px;
+    }
+    /*.favorite_item01 {
+        width: 12vw;
+    }
+    .favorite_item02 {
+        width: 12vw;
+    }
+    .favorite_item03 {
+        width: 12vw;
+    }
+    .favorite_item04 {
+        width: 12vw;
+    }*/
+    .message p {
+        font-size: 30px;
+        line-height: 2.7;
+    }
+}
 /*レスポンシブ1100px~*/
 /*skillの文章改行の調整*/
 @media screen and (max-width: 1135px) {
@@ -1048,7 +1099,8 @@ img {
     }
     /*デザインスキル*/
     .design_skill {
-        width: 55vw; /*841/1366*100*/
+        /*width: 55vw; /*841/1366*100*/
+        width: 100%;
     }
     .icon_design {
         display: none;
@@ -1062,13 +1114,14 @@ img {
     .sp_icon_design ul {
         display: flex;
         justify-content: left;
-        padding: 20px 10px;
+        padding: 20px 0 20px 10px;
     }
     .sp_skill_item {
         padding: 5px 0 5px 10px;
     }
     .sp_skill_item p {
-        width: 36.6vw; /*500/1366*100*/
+        /*width: 36.6vw; /*500/1366*100*/
+        width: 100%;
         line-height: 2;
     }
     .bold {
@@ -1079,6 +1132,7 @@ img {
     }
     .sp_skill_explanation {
         font-size: 15px;
+        width: 100%;
     }
     /*コーディングスキル*/
     .cording_skill {
@@ -1230,6 +1284,7 @@ img {
     .pc_message {
         display: none;
     }
+
     .spme {
         display: inline;
         text-align: center;
@@ -1238,33 +1293,52 @@ img {
     .spme img {
         vertical-align: top;
     }
+    .message p {
+        font-size: 3.3vw; /*25/750*100*/
+    }
     .sp_message {
         position: absolute;
-        top: 250px;
+        top: 18.6vh; /*140/750*100*/
         left: 0;
         width: 100%;
-        display: inline;
-        font-size: 35px;
-        font-family: "Yu Mincho";
-        color: #0094ff;
-        line-height: 2.1; /*38/18*/
-        text-align: center;
-        font-feature-settings: "palt";
-        letter-spacing: 0.05em; /*50/1000*/
-        margin: 0 auto;
     }
+
     /*2_Skill_できること*/
     .contents2 {
-        padding-top: 55vh;
+        padding-top: 66.6vh; /*500/750*100*/
+    }
+    .skill_content {
+        width: 90%;
+    }
+    .sp_icon_design {
+        width: 100%;
     }
     .icon_cording ul {
         display: none;
     }
     .sp_icon_conrding {
         display: inline;
+        width: 90%;
     }
     .sp_icon_conrding ul {
         display: flex;
+        width: 100%;
+    }
+    .sp_skill_item {
+        width: 100%;
+    }
+    .sp_skill_item br {
+        display: none;
+    }
+    .sp_skill_item p {
+        width: 100%;
+    }
+    .skill_explanation02 {
+        width: 90vw;
+    }
+    .skill_explanation02 p {
+        width: 90%;
+        padding: 0;
     }
 
     /*フッター*/
@@ -1272,28 +1346,33 @@ img {
         width: 100%;
         height: 130vh;
         background-image: url(../images/sp_footer750×1330.png);
+        background-size: contain;
+        background-size: cover;
     }
 
     /*4_お問い合わせ*/
     .contents4_detail {
-        width: 93.3vw; /*700/750*100*/
+        width: 95%; /*700/750*100*/
         margin: 0 auto;
     }
     .select {
-        width: 73.3vw; /*550/750*100*/
+        width: 100%; /*550/750*100*/
+        box-sizing: border-box;
     }
     .contact_message {
         font-size: 15px;
     }
     .contact_form {
         margin-top: 60px;
-        width: 80%;
+        width: auto;
     }
     .space {
-        width: 73.3vw;
+        width: 100%;
+        box-sizing: border-box; /*paddingとborderを幅と高さに含める*/
     }
     .textarea {
-        width: 73.3vw;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .pc_nav_footer {
@@ -1316,7 +1395,8 @@ img {
     }
     .button02 {
         margin-top: 5vw;
-        width: 70vw;
+        width: 100%;
+        box-sizing: border-box;
     }
     .button02 a {
         font-size: 16px;
@@ -1342,6 +1422,11 @@ img {
     }
     .logo_name {
         font-size: 6vw; /*25/412*100*/
+    }
+
+    /*できること*/
+    .sp_skill_item br {
+        display: block;
     }
 }
 
@@ -1374,11 +1459,20 @@ img {
         line-height: 1.7; /*29/17*/
         color: #0094ff;
     }
-
+    /*自己紹介*/
+    .message p {
+        font-size: 4.2vw; /*16/375*100*/
+    }
+    .sp_message {
+        position: absolute;
+        top: 6.6vh; /*140/750*100*/
+        /*width: 100%;*/
+        /*display: inline;*/
+    }
     /*フッター*/
     .footer {
         width: 100%;
-        height: 250vh; /*1500/375*100*/
+        height: 400vh; /*1500/375*100*/
         background-image: url(../images/PF_sea_02_resize_375×1500.jpg);
     }
     /*フッターナビ*/
@@ -1422,10 +1516,6 @@ img {
 }
 /*works.html-レスポンシブ412px~*/
 @media screen and (max-width: 412px) {
-    /*3_Works_作品実績*/
-    /*.works-button01 span {
-        text-align: center;
-    }*/
     .works-button01 br {
         display: inline;
     }

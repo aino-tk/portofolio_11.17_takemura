@@ -39,7 +39,7 @@
                         <li><a href="#skill">Skill</a></li>
                         <li><a href="#works">Works</a></li>
                         <li class="#nav_contact"><a href="#contact">Contact</a></li>
-                        <li><a href="https://www.instagram.com/chesya_neko/">
+                        <li class="instagram_logo"><a href="https://www.instagram.com/chesya_neko/">
                                 <img src="images/logo_instagram.png" alt="インスタグラムロゴ">
                             </a></li>
                     </ul>
@@ -54,7 +54,7 @@
                         <li><a href="#skill">Skill</a></li>
                         <li><a href="#works">Works</a></li>
                         <li><a href="#nav_contact">Contact</a></li>
-                        <li><a href="https://www.instagram.com/chesya_neko/">
+                        <li class="sp_instagram_logo"><a href="https://www.instagram.com/chesya_neko/">
                                 <img src="images/logo_instagram.png" alt="インスタグラムロゴ">
                             </a></li>
                     </ul>
@@ -197,12 +197,12 @@
                             <li class="skill_item">
                                 <img src="images/icon_skill03.png" alt="CSSアイコン">
                                 <p>CSS</p>
-                                <p class="star"><span class="star_blue">★★</span>★★★</p>
+                                <p class="star"><span class="star_blue">★★★</span>★★</p>
                             </li>
                             <li class="skill_item">
                                 <img src="images/icon_skill04.png" alt="HTMLアイコン">
                                 <p>HTML</p>
-                                <p class="star"><span class="star_blue">★★</span>★★★</p>
+                                <p class="star"><span class="star_blue">★★★</span>★★</p>
                             </li>
                             <li class="skill_item">
                                 <img src="images/icon_skill05.png" alt="JSアイコン">
@@ -210,19 +210,20 @@
                                 <p class="star"><span class="star_blue">★</span>★★★★</p>
                             </li>
                         </ul>
+                        <!--コーディング_スマホ-->
                         <div class="sp_icon_conrding">
                             <ul>
                                 <li><img src="images/icon_skill03.png" alt="CSSアイコン"></li>
                                 <li class="sp_skill_item">
-                                    <p><span class="bold">CSS</span>　<span class="star_blue">★★</span><span
-                                            class="star_gray">★★★</span></p>
+                                    <p><span class="bold">CSS</span>　<br><span class="star_blue">★★★</span><span
+                                            class="star_gray">★★</span></p>
                                 </li>
                             </ul>
                             <ul>
                                 <li><img src="images/icon_skill04.png" alt="HTMLアイコン"></li>
                                 <li class="sp_skill_item">
-                                    <p><span class="bold">HTML</span>　<span class="star_blue">★★</span><span
-                                            class="star_gray">★★★</span></p>
+                                    <p><span class="bold">HTML</span>　<span class="star_blue">★★★</span><span
+                                            class="star_gray">★★</span></p>
                                 </li>
                             </ul>
                             <ul>
@@ -394,7 +395,7 @@
                     <li><a href="#skill">Skill</a></li>
                     <li><a href="#works">Works</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://www.instagram.com/chesya_neko/">
+                    <li class="instagram_logo"><a href="https://www.instagram.com/chesya_neko/">
                             <img src="images/logo_instagram.png" alt="インスタグラムロゴ">
                         </a></li>
                 </ul>
@@ -411,7 +412,7 @@
                 </ul>
                 <ul>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://www.instagram.com/chesya_neko/">
+                    <li class="instagram_logo"><a href="https://www.instagram.com/chesya_neko/">
                             <img src="images/logo_instagram.png" alt="インスタグラムロゴ">
                         </a></li>
                 </ul>
@@ -456,6 +457,7 @@
                 slidesToShow: 3, //一度に表示するスライド数
                 slidesToScroll: 3, //1回のスライドで移動するスライド数
                 dots: true,
+                arrows: false, //右側のデフォルトの矢印を消す
                 responsive: [
                     {
                         breakpoint: 1063, //1063px以下で適用

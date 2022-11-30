@@ -350,6 +350,50 @@
                         お問い合わせいただいた内容は確認後、3営業日以内にご連絡させていただきます。</p>
                     <form class="contact_form"
                         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdZPI0l3ZOJTk601Nlt-_gKrJE0h2n6W6_N91uQaptHlHQfaw/formResponse">
+                        <div>
+                            <select class="select" name="choose">
+                                <option value="design">デザインについてのご相談・ご質問</option>
+                                <option value="coding">コーディングについてのご相談・ご質問</option>
+                                <option value="website">Webサイト制作についてのご相談・ご質問</option>
+                                <option value="others">その他</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="contact_title" for="name">
+                                <p>お名前 (貴社名)<span class="required">必須</span></p>
+                                <input class="space" id="name" type="text" name="yourname" placeholder="田中　花子" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="contact_title" for="name_assistance">フリガナ</label>
+                            <input class="space" id="name_assistance" type="text" name="yourname" placeholder="タナカ　ハナコ"
+                                required>
+                        </div>
+                        <div>
+                            <label class="contact_title" for="mail">メールアドレス</label>
+                            <input class="space" id="mail" type="email" name="mail" placeholder="info@example.com"
+                                required>
+                        </div>
+                        <div>
+                            <label class="contact_title" for="tel">
+                                <p>電話番号<span class="required">必須</span></p>
+                            </label>
+                            <input class="space" id="tel" type="text" name="tel" placeholder="090-1234-5678" required>
+                        </div>
+                        <div>
+                            <label class="contact_title" for="comment">
+                                <p>お問い合わせの内容<span class="required">必須</span></p>
+                            </label>
+                            <textarea class="textarea" id="comment" name="comment" placeholder="こちらにお問い合わせ内容を記入してください。"
+                                required></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" class="button02" value="内容を送信する" />
+                        </div>
+                    </form>
+                    <!--
+                        <form class="contact_form"
+                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdZPI0l3ZOJTk601Nlt-_gKrJE0h2n6W6_N91uQaptHlHQfaw/formResponse">
                         <select class="select" name="choose">
                             <option value="design">デザインについてのご相談・ご質問</option>
                             <option value="coding">コーディングについてのご相談・ご質問</option>
@@ -376,7 +420,7 @@
                         <div>
                             <input type="submit" class="button02" value="内容を送信する" />
                         </div>
-                    </form>
+                    </form>-->
                 </div>
             </section>
             <!--フッターナビ-->
